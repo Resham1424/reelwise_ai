@@ -58,6 +58,7 @@ A student watches a Java meme, a "day in the life of a software engineer" Reel, 
 7. **Useful Recommendation + "Why this?"** — the final Reel is returned along with a transparent explanation of why it was chosen, so the reasoning isn't a black box.
 
 ---
+<img width="991" height="817" alt="Screenshot 2026-08-18 122852" src="https://github.com/user-attachments/assets/106b0dd1-e13d-437d-aa6f-d8dc962ca799" />
 
 ## Output Format
 
