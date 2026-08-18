@@ -1,0 +1,1 @@
+- [Expo preview startup](expo-preview-startup.md) — the first web capture can be blank while Metro finishes its initial bundle; wait for the bundle-complete log before judging the render.
