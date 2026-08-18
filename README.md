@@ -58,7 +58,13 @@ A student watches a Java meme, a "day in the life of a software engineer" Reel, 
 7. **Useful Recommendation + "Why this?"** — the final Reel is returned along with a transparent explanation of why it was chosen, so the reasoning isn't a black box.
 
 ---
-<img width="991" height="817" alt="Screenshot 2026-08-18 122852" src="https://github.com/user-attachments/assets/106b0dd1-e13d-437d-aa6f-d8dc962ca799" />
+DEMO PHOTOS
+<img width="500" height="500" alt="Screenshot 2026-08-18 122852" src="https://github.com/user-attachments/assets/106b0dd1-e13d-437d-aa6f-d8dc962ca799" />
+<img width="720" height="796" alt="Screenshot 2026-08-18 122922" src="https://github.com/user-attachments/assets/e60c146c-7fa8-4e00-9038-245921527411" />
+<img width="1061" height="729" alt="Screenshot 2026-08-18 122944" src="https://github.com/user-attachments/assets/81ddc26b-86c2-4a3c-a6ce-85793232330f" />
+<img width="758" height="806" alt="Screenshot 2026-08-18 123003" src="https://github.com/user-attachments/assets/8421d59a-f8ba-4a47-bc2b-14c91cea3ba1" />
+<img width="831" height="783" alt="Screenshot 2026-08-18 123023" src="https://github.com/user-attachments/assets/781a1f3e-19d9-4d59-8fd4-4348e677a01c" />
+<img width="853" height="806" alt="Screenshot 2026-08-18 123059" src="https://github.com/user-attachments/assets/1e2636de-3e5e-445b-8b28-21fdce2d411c" />
 
 ## Output Format
 
