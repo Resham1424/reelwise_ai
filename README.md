@@ -156,7 +156,10 @@ To preview on a phone, scan the QR code served at the app's `/mobile` route usin
 
 ## Live Preview
 
-- **Mobile preview (Expo Go):** https://reel-insight-engine--rresham317.replit.app/mobile/
+-    https://ais-pre-jgdpznpuvdlniuiw4zqwe6-840365476687.asia-southeast1.run.app/
+-                                    OR     
+-    **Mobile preview (Expo Go):** https://reel-insight-engine--rresham317.replit.app/mobile/
+                     
 
 ---
 
