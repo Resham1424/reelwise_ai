@@ -1,0 +1,266 @@
+The current prototype is visually good and the mobile Reel experience is working.
+
+DO NOT rebuild the application.
+
+I want one final high-impact improvement focused on proving the core hackathon innovation.
+
+The key problem we must solve is:
+
+A shallow recommender sees:
+Java meme → Java content
+
+Our agent should see:
+
+Java meme
++ Software Engineer lifestyle
++ Coding interview
++ Laptop comparison
+
+↓
+
+UNDERLYING INTEREST:
+Software Engineering / Technology
+
+↓
+
+RECOMMENDATION:
+A useful technology topic that expands the interest.
+
+IMPLEMENT THIS AS THE MAIN DEMO FLOW.
+
+==================================================
+1. HACKATHON DEMO MODE
+==================================================
+
+Keep the existing "Demo" functionality, but make it run as a guided 4-Reel sequence.
+
+Reel 1:
+"Java Developer Problems 😂"
+95% watched
+Liked
+Rewatched
+
+Reel 2:
+"Day in the Life of a Software Engineer"
+91% watched
+Liked
+
+Reel 3:
+"Coding Interview Expectations vs Reality"
+88% watched
+Liked
+
+Reel 4:
+"Laptop Performance Comparison for Developers"
+76% watched
+Not liked
+
+After each Reel, show a small "signal captured" indicator.
+
+Do NOT immediately reveal the final interest.
+
+==================================================
+2. AI ANALYSIS MOMENT
+==================================================
+
+After the fourth Reel, show a transition:
+
+"4 REELS.
+1 HIDDEN PATTERN."
+
+Then:
+
+"Reelwise is connecting the signals..."
+
+Show:
+
+Programming
+Developer Career
+Coding Interviews
+Technology
+Hardware
+
+Then reveal:
+
+"YOU DIDN'T JUST WATCH JAVA CONTENT."
+
+"YOUR BROADER INTEREST"
+
+SOFTWARE ENGINEERING
+
+Confidence: HIGH
+
+Make this the main visual WOW moment.
+
+==================================================
+3. IMPORTANT: JAVA MUST NOT BE THE PRIMARY INTEREST
+==================================================
+
+Show:
+
+Java Programming
+Context Signal
+
+Software Engineering
+Primary Interest
+
+This distinction must be visually obvious.
+
+The system should demonstrate that Java is only one signal contributing to the broader inferred interest.
+
+==================================================
+4. RECOMMENDATION
+==================================================
+
+After the interest reveal, show:
+
+"SO WE WON'T RECOMMEND ANOTHER JAVA REEL."
+
+"TRY THIS INSTEAD"
+
+How Modern Software Engineers Design Scalable APIs
+
+CATEGORY:
+HLD
+
+DIFFICULTY:
+Intermediate
+
+CONFIDENCE:
+High
+
+WHY THIS?
+
+"Your interactions indicate a broader interest in software engineering, developer careers, and technology. System design expands that interest instead of repeating Java content."
+
+==================================================
+5. WHY THIS? MUST BE FUNCTIONAL
+==================================================
+
+The existing "Why this?" button should open a bottom sheet/modal.
+
+Show:
+
+WHAT YOU WATCHED
+→ Java Meme
+→ Software Engineer Lifestyle
+→ Coding Interview
+→ Laptop Comparison
+
+WHAT WE INFERRED
+→ Programming
+→ Developer Career
+→ Technology
+
+LATENT INTEREST
+→ Software Engineering
+
+WHY THIS RECOMMENDATION
+→ System design is a related skill that expands the inferred interest.
+
+Do not make this a static decorative diagram.
+
+==================================================
+6. HYPESHEILD
+==================================================
+
+Keep HypeShield but make it part of the recommendation decision.
+
+Show at least 3 candidate recommendations:
+
+1.
+"10 AI Tools That Will Get You a Job"
+Hype Risk: HIGH
+Decision: REJECTED
+
+2.
+"How Modern Software Engineers Design Scalable APIs"
+Educational Value: HIGH
+Hype Risk: LOW
+Decision: SELECTED
+
+3.
+"5 Coding Tricks Every Developer Must Know"
+Decision: REJECTED
+
+The user should be able to see that HypeShield actually influenced the final recommendation.
+
+==================================================
+7. DO NOT MAKE IT A DASHBOARD
+==================================================
+
+Keep the current mobile-first Reel interface.
+
+Do not add large analytics dashboards.
+
+The product should feel like:
+
+SHORT-FORM FEED
++
+AI OBSERVATION
++
+LATENT INTEREST DISCOVERY
++
+EXPLAINABLE RECOMMENDATION
+
+rather than:
+
+AI ANALYTICS DASHBOARD.
+
+==================================================
+8. IMPORTANT TECHNICAL REQUIREMENT
+==================================================
+
+Do not fake the interaction state just for the UI.
+
+The demo should use the existing application state and recommendation logic.
+
+If Gemini/API functionality is available, use it for semantic inference.
+
+If the API is unavailable, use a deterministic fallback that correctly handles the demo scenario.
+
+The application must still work without external API failure.
+
+==================================================
+9. FINAL TEST
+==================================================
+
+Before finishing, test this exact flow:
+
+Java Meme
+→ Like + Rewatch
+
+Software Engineer Lifestyle
+→ Like
+
+Coding Interview
+→ Like
+
+Laptop Comparison
+→ Watch
+
+Then verify:
+
+Primary Interest:
+Software Engineering / Technology
+
+NOT:
+Java
+
+Then verify:
+
+Recommendation:
+How Modern Software Engineers Design Scalable APIs
+
+Then verify:
+
+Why This works.
+
+Then verify:
+
+HypeShield rejects clickbait.
+
+Fix any errors you find.
+
+Do not add unrelated features.
+Do not rewrite the project.

@@ -5,9 +5,9 @@ import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native
 import { useColors } from '@/hooks/useColors';
 
 export type Reel = { id: string; image: number; eyebrow: string; title: string; creator: string; duration: string; tags: string[]; hypeScore: number; signal: string };
-type ReelCardProps = { reel: Reel; height: number; watchPercent: number; liked: boolean; rewatched: number; isCurrent: boolean; onLike: () => void; onSkip: () => void; onRewatch: () => void; onWhy: () => void };
+type ReelCardProps = { reel: Reel; height: number; watchPercent: number; liked: boolean; rewatched: number; isCurrent: boolean; signalCaptured: boolean; onLike: () => void; onSkip: () => void; onRewatch: () => void; onWhy: () => void };
 
-export function ReelCard({ reel, height, watchPercent, liked, rewatched, isCurrent, onLike, onSkip, onRewatch, onWhy }: ReelCardProps) {
+export function ReelCard({ reel, height, watchPercent, liked, rewatched, isCurrent, signalCaptured, onLike, onSkip, onRewatch, onWhy }: ReelCardProps) {
   const colors = useColors();
   const progressWidth = `${watchPercent}%` as `${number}%`;
   return <View style={[styles.page, { minHeight: height }]}>
@@ -21,7 +21,7 @@ export function ReelCard({ reel, height, watchPercent, liked, rewatched, isCurre
       <View style={styles.metaRow}><View style={styles.tagRow}>{reel.tags.map((tag) => <View key={tag} style={[styles.tag, { backgroundColor: colors.surfaceSoft }]}><Text style={[styles.tagText, { color: colors.secondaryForeground }]}>{tag}</Text></View>)}</View><Text style={[styles.percent, { color: colors.cyan }]}>{watchPercent}% watched</Text></View>
       <View style={[styles.progressTrack, { backgroundColor: colors.surfaceElevated }]}><View style={[styles.progressFill, { width: progressWidth, backgroundColor: colors.cyan }]} /></View>
       <View style={styles.actionRow}><ActionButton icon={liked ? 'heart' : 'heart-outline'} label={liked ? 'Liked' : 'Like'} active={liked} onPress={onLike} /><ActionButton icon="repeat" label={rewatched > 0 ? ('Replay x' + rewatched) : 'Rewatch'} active={rewatched > 0} onPress={onRewatch} /><ActionButton icon="close-circle-outline" label="Skip" onPress={onSkip} /><Pressable accessibilityRole="button" testID={'why-' + reel.id} onPress={onWhy} style={({ pressed }) => [styles.whyButton, { backgroundColor: colors.cyan, opacity: pressed ? 0.82 : 1 }]}><Ionicons name="sparkles" size={16} color={colors.black} /><Text style={[styles.whyText, { color: colors.black }]}>Why this?</Text></Pressable></View>
-      {isCurrent ? <View style={[styles.signalNotice, { borderColor: colors.border, backgroundColor: colors.card }]}><View style={[styles.signalIcon, { backgroundColor: colors.surfaceSoft }]}><Ionicons name="git-branch-outline" size={16} color={colors.violet} /></View><View style={styles.signalCopy}><Text style={[styles.signalLabel, { color: colors.mutedForeground }]}>SIGNAL CAPTURED</Text><Text style={[styles.signalText, { color: colors.foreground }]}>Context beats keywords. Reelwise is watching what connects.</Text></View><Ionicons name="chevron-forward" size={16} color={colors.mutedForeground} /></View> : <Text style={[styles.nextHint, { color: colors.mutedForeground }]}>Keep scrolling to teach Reelwise what feels useful.</Text>}
+      {isCurrent && signalCaptured ? <View style={[styles.signalNotice, { borderColor: colors.border, backgroundColor: colors.card }]}><View style={[styles.signalIcon, { backgroundColor: colors.surfaceSoft }]}><Ionicons name="git-branch-outline" size={16} color={colors.violet} /></View><View style={styles.signalCopy}><Text style={[styles.signalLabel, { color: colors.mutedForeground }]}>SIGNAL CAPTURED</Text><Text style={[styles.signalText, { color: colors.foreground }]}>{reel.signal} · context beats keywords.</Text></View><Ionicons name="chevron-forward" size={16} color={colors.mutedForeground} /></View> : <Text style={[styles.nextHint, { color: colors.mutedForeground }]}>Keep scrolling to teach Reelwise what feels useful.</Text>}
     </View>
   </View>;
 }
