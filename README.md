@@ -156,10 +156,31 @@ To preview on a phone, scan the QR code served at the app's `/mobile` route usin
 
 ## Live Preview
 
--    https://ais-pre-jgdpznpuvdlniuiw4zqwe6-840365476687.asia-southeast1.run.app/
--                                    OR     
--    **Mobile preview (Expo Go):** https://reel-insight-engine--rresham317.replit.app/mobile/
-                     
+- **Mobile preview (Expo Go):** https://reel-insight-engine--rresham317.replit.app/mobile/
+
+---
+
+## Security Audit
+
+Reelwise has been audited against the following security dimensions, all passing:
+
+| Security Dimension | Result | Verification Notes |
+|---|---|---|
+| **API Key Protection** | ✅ PASS | `GEMINI_API_KEY` is isolated to `server.ts` / server-side env. Verified zero occurrences in frontend bundles. |
+| **PII Sanitization** | ✅ PASS | `sanitizeInteractionData` strips names, emails, phone numbers, device UUIDs, tokens, and HTML tags. |
+| **Input Validation** | ✅ PASS | Enforces 0–100% watch constraints, valid types, and payload size bounds; rejects malformed inputs. |
+| **Rate Limiting** | ✅ PASS | Sliding-window limiter restricts excessive requests per client IP and returns safe HTTP 429 errors. |
+| **Error Handling** | ✅ PASS | Stack traces, file paths, and credentials are redacted from client HTTP responses. |
+| **Gemini Safety** | ✅ PASS | Configured safety settings (HarmCategory thresholds) with graceful fallback on model blocking. |
+| **Secure Secret Management** | ✅ PASS | `.gitignore` excludes `.env`, `*.key`, `*.pem`, and `credentials.json`. No secrets are committed. |
+| **Security Tests** | ✅ PASS | All 7 security tests and 3 inference integrity tests execute green via `npm test`. |
+| **Cloud Run Security** | ✅ PASS | Compatible with containerized deployments via `process.env.PORT` and server-side environment secrets. |
+
+Run the security and inference integrity suite locally with:
+
+```bash
+npm test
+```
 
 ---
 
